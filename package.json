@@ -1,0 +1,13 @@
+{
+  "name": "Blog",
+  "version": "1.0.0",
+  "description": "Rstankov's blog",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Radoslav Stankov",
+  "license": "MIT",
+  "dependencies": {
+    "ghost": "0.5.7"
+  }
+}
