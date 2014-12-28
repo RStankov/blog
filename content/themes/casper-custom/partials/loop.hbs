@@ -8,10 +8,12 @@
 <article class="{{post_class}}">
     <header class="post-header">
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+        <section class="post-meta">
+          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+        </section>
     </header>
-    <section class="post-excerpt">
-        <p>{{content}}</p>
+    <section class="post-content">
+{{content}}
     </section>
 </article>
 {{/foreach}}

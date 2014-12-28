@@ -201,7 +201,7 @@ h4, h5, h6 {
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     color: #2E2E2E;
     line-height: 1.15em;
-    margin: 0 0 0.4em 0;
+    margin: 0 0 0 0;
     font-family: "Open Sans", sans-serif;
 }
 
@@ -763,7 +763,6 @@ body:not(.post-template) .post-title {
 
 .post-meta {
     display: block;
-    margin: 1.75rem 0 0 0;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
@@ -844,22 +843,8 @@ body:not(.post-template) .post-title {
    5. Single Post - When you click on an individual post
    ========================================================================== */
 
-.post-template .post-header {
+.post-header {
    margin-bottom: 3.4rem;
-}
-
-.post-template .post-title {
-    margin-bottom: 0;
-}
-
-.post-template .post-meta {
-    margin: 0;
-}
-
-.post-template .post-date {
-    padding: 0;
-    margin: 0;
-    border: none;
 }
 
 /* Stop .full-img from creating horizontal scroll - slight hack due to
@@ -932,43 +917,6 @@ body:not(.post-template) .post-title {
 }
 .author-meta a:hover {
     color: #111;
-}
-
-/* Create some space to the right for the share links */
-.post-footer .author {
-    margin-right: 180px;
-}
-
-.post-footer h4 a {
-    color: #2e2e2e;
-    text-decoration: none;
-}
-
-.post-footer h4 a:hover {
-    text-decoration: underline;
-}
-
-/* Drop the share links in the space to the right.
-   Doing it like this means it's easier for the author bio
-   to be flexible at smaller screen sizes while the share
-   links remain at a fixed width the whole time */
-.post-footer .share {
-    position: absolute;
-    top: 6rem;
-    right: 0;
-    width: 140px;
-}
-
-.post-footer .share a {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
-    text-decoration: none;
-}
-
-.post-footer .share a:hover {
-    color: #50585D;
 }
 
 /* The subscribe icon on the footer */
