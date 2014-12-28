@@ -795,13 +795,12 @@ body:not(.post-template) .post-title {
 }
 
 .post-date {
-    display: inline-block;
-    margin-left: 8px;
-    padding-left: 12px;
-    border-left: #d5dbde 1px solid;
     text-transform: uppercase;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
     white-space: nowrap;
+    color: #9EABB3;
 }
 
 .user-image {
