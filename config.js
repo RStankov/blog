@@ -5,7 +5,7 @@ var path = require('path');
 
 module.exports = {
   production: {
-    url: 'http://rstankov-blog.herokuapp.com/',
+    url: 'http://blog.rstankov.com/',
     mail: {},
     fileStorage: false,
 
