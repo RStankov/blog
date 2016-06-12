@@ -8,7 +8,7 @@
   "author": "Radoslav Stankov",
   "license": "MIT",
   "dependencies": {
-    "ghost": "0.9.0-beta.1"
+    "ghost": "0.8.0"
   },
   "engines": {
     "node": "4.4.5"
