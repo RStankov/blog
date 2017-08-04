@@ -1,13 +1,20 @@
 {
   "name": "Blog",
   "version": "1.0.0",
-  "description": "Rstankov's blog",
+  "description": "Rado's blog",
   "main": "index.js",
   "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rstankov/blog.git"
+  },
   "author": "Radoslav Stankov",
   "license": "MIT",
+  "homepage": "https://github.com/rstankov/blog",
   "dependencies": {
-    "ghost": "0.11.10"
+    "ghost": "^1.5.0",
+    "knex-migrator": "^2.1.5",
+    "parse-database-url": "^0.3.0"
   },
   "engines": {
     "node": "6.9.0"

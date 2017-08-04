@@ -1,22 +1,36 @@
 // Ghost Configuration
 // Documentation can be found at http://support.ghost.org/config/
 
-var path = require('path');
+const path = require('path');
 
-module.exports = {
-  production: {
+if (process.env.NODE_ENV === 'production') {
+  const parseUrl = require("parse-database-url");
+  const databaseConfig = process.env.CLEARDB_DATABASE_URL ? parseUrl(process.env.CLEARDB_DATABASE_URL) : {};
+
+  module.exports = {
     url: 'http://blog.rstankov.com/',
-    mail: {},
+
+    mail: {
+      transport: 'SMTP',
+      host: process.env.MAILGUN_SMTP_SERVER,
+      options: {
+        service: process.env.MAILGUN_SMTP_SERVER,
+        auth: {
+          user: process.env.MAILGUN_SMTP_LOGIN,
+          pass: process.env.MAILGUN_SMTP_PASSWORD
+        }
+      }
+    },
+
     fileStorage: false,
 
     database: {
-      client: 'postgres',
+      client: databaseConfig.driver,
       connection: {
-        host: process.env.POSTGRES_HOST,
-        user: process.env.POSTGRES_USER,
-        password: process.env.POSTGRES_PASSWORD,
-        database: process.env.POSTGRES_DATABASE,
-        port: '5432'
+        host: databaseConfig.host,
+        user: databaseConfig.user,
+        password: databaseConfig.password,
+        database: databaseConfig.database,
       },
       debug: false
     },
@@ -27,30 +41,30 @@ module.exports = {
     },
 
     paths: {
-      contentPath: path.join(__dirname, '/content/')
+      contentPath: path.join(__dirname, '/content/'),
     }
-  },
+  };
 
-  development: {
-    url: 'http://localhost:2368',
+} else {
+  module.exports = {
+      url: 'http://localhost:2368',
 
-    database: {
-      client: 'sqlite3',
-      connection: {
-        filename: path.join(__dirname, '/content/data/ghost-dev.db')
+      database: {
+        client: 'sqlite3',
+        connection: {
+          filename: path.join(__dirname, '/content/data/ghost-dev.db')
+        },
+        debug: false
       },
-      debug: false
-    },
 
-    server: {
-      // Host to be passed to node's `net.Server#listen()`
-      host: '127.0.0.1',
-      // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-      port: '2368'
-    },
+      server: {
+        host: '127.0.0.1',
+        port: '2368'
+      },
 
-    paths: {
-      contentPath: path.join(__dirname, '/content/')
-    }
-  }
-};
+      paths: {
+        contentPath: path.join(__dirname, '/content/'),
+      }
+  };
+}
+

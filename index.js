@@ -1,8 +1,5 @@
-var path  = require('path'),
-    ghost = require('ghost');
+require('./configOverwrite');
 
-ghost({
-  config: path.join(__dirname, 'config.js')
-}).then(function (ghostServer) {
-  ghostServer.start();
-});
+const ghost = require('ghost');
+
+ghost().then((server) => server.start());
