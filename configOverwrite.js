@@ -11,5 +11,6 @@ config.set('database', localConfig.database);
 config.set('url', localConfig.url);
 config.set('server', localConfig.server);
 config.set('paths:contentPath', localConfig.paths.contentPath);
+config.set('storage', localConfig.storage);
 
 module.exports = config;

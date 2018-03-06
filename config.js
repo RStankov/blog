@@ -22,8 +22,6 @@ if (process.env.NODE_ENV === 'production') {
       }
     },
 
-    fileStorage: false,
-
     database: {
       client: databaseConfig.driver,
       connection: {
@@ -41,30 +39,41 @@ if (process.env.NODE_ENV === 'production') {
     },
 
     paths: {
-      contentPath: path.join(__dirname, '/content/'),
+      contentPath: path.join(__dirname, '/content/')
+    },
+
+    storage: {
+      active: 's3',
+      s3: {
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        region: process.env.AWS_REGION,
+        bucket: process.env.AWS_BUCKET,
+        pathPrefix: 'uploads'
+      }
     }
   };
 
 } else {
   module.exports = {
-      url: 'http://localhost:2368',
+    url: 'http://localhost:2368',
 
-      database: {
-        client: 'sqlite3',
-        connection: {
-          filename: path.join(__dirname, '/content/data/ghost-dev.db')
-        },
-        debug: false
+    database: {
+      client: 'sqlite3',
+      connection: {
+        filename: path.join(__dirname, '/content/data/ghost-dev.db')
       },
+      debug: false
+    },
 
-      server: {
-        host: '127.0.0.1',
-        port: '2368'
-      },
+    server: {
+      host: '127.0.0.1',
+      port: '2368'
+    },
 
-      paths: {
-        contentPath: path.join(__dirname, '/content/'),
-      }
+    paths: {
+      contentPath: path.join(__dirname, '/content/')
+    },
   };
 }
 

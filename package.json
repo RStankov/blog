@@ -13,6 +13,7 @@
   "homepage": "https://github.com/rstankov/blog",
   "dependencies": {
     "ghost": "1.8.6",
+    "ghost-storage-adapter-s3": "^2.3.1",
     "knex-migrator": "2.1.5",
     "parse-database-url": "^0.3.0",
     "sqlite3": "^3.1.13"
