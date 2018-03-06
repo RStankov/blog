@@ -6,7 +6,7 @@ This is [ghost](https://ghost.org/) configuration for my personal [blog](http://
 ### Installation
 
 ```
-npm install
+yarn install
 
 ./node_modules/.bin/knex-migrator init
 ```
