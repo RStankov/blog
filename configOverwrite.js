@@ -1,4 +1,4 @@
-// NOTE(rstankov): This is needed, since Ghost 1.0.0 removed the support of user defined confutation files
+// NOTE(rstankov): This is needed, since Ghost 1.0.0 removed the support of user defined configuration files
 //
 // Related issues:
 //  - https://github.com/TryGhost/Ghost/issues/8754
