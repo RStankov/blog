@@ -667,11 +667,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
     min-width: 100%;
 }
 
-.post-template .kg-card-markdown > p:first-child {
-    font-size: 1.25em;
-    line-height: 1.5em;
-}
-
 .post-full-content a {
     color: inherit;
     box-shadow: #3c484e 0 -1px 0 inset;
@@ -811,26 +806,32 @@ Super neat trick courtesy of @JoelDrapper
 }
 
 .post-full-content h1 {
+    font-weight: bold;
     font-size: 5rem;
 }
 
 .post-full-content h2 {
+    font-weight: bold;
     font-size: 3.5rem;
 }
 
 .post-full-content h3 {
+    font-weight: bold;
     font-size: 2.5rem;
 }
 
 .post-full-content h4 {
+    font-weight: bold;
     font-size: 1.6rem;
 }
 
 .post-full-content h5 {
+    font-weight: bold;
     font-size: 1.4rem;
 }
 
 .post-full-content h6 {
+    font-weight: bold;
     font-size: 1.4rem;
 }
 

@@ -7,8 +7,8 @@ This is [ghost](https://ghost.org/) configuration for my personal [blog](http://
 
 ```
 yarn install
-
-./node_modules/.bin/knex-migrator init
+yarn run knex-migrator init
+yarn run knex-migrator migrate
 ```
 
 ### Running
