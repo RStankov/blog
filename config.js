@@ -5,7 +5,7 @@ const path = require('path');
 
 if (process.env.NODE_ENV === 'production') {
   const parseUrl = require("parse-database-url");
-  const databaseConfig = process.env.CLEARDB_DATABASE_URL ? parseUrl(process.env.CLEARDB_DATABASE_URL) : {};
+  const databaseConfig = process.env.DATABASE_URL ? parseUrl(process.env.DATABASE_URL) : {};
 
   module.exports = {
     url: 'http://blog.rstankov.com/',
@@ -29,6 +29,7 @@ if (process.env.NODE_ENV === 'production') {
         user: databaseConfig.user,
         password: databaseConfig.password,
         database: databaseConfig.database,
+        ssl: true,
       },
       debug: false
     },
