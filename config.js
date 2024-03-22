@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'production') {
         user: databaseConfig.user,
         password: databaseConfig.password,
         database: databaseConfig.database,
-        ssl: true,
+        // ssl: true,
       },
       debug: false
     },
